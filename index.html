@@ -3,54 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <title>Schiphol E-learning Kiosk</title>
+
 <style>
 body { font-family: Arial; background:#111; color:#fff; text-align:center; padding:50px; }
-a { display:block; margin:15px; padding:15px; background:#0066cc; color:#fff; text-decoration:none; font-size:22px; border-radius:8px; }
+
+a {
+display:block;
+margin:15px;
+padding:15px;
+background:#0066cc;
+color:#fff;
+text-decoration:none;
+font-size:22px;
+border-radius:8px;
+}
+
 a:hover { background:#004999; }
-#overlay { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); color:#fff; font-size:28px; text-align:center; padding-top:200px; z-index:9999; }
+
+#overlay {
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+color:#fff;
+font-size:28px;
+text-align:center;
+padding-top:200px;
+z-index:9999;
+}
+
 #logo { position:fixed; bottom:10px; right:10px; }
+
 #instructions { font-size:18px; margin-top:30px; color:#ccc; }
-button { margin-top:30px; padding:10px 20px; font-size:20px; border:none; border-radius:6px; background:#0066cc; color:#fff; cursor:pointer; }
+
+button {
+margin-top:30px;
+padding:10px 20px;
+font-size:20px;
+border:none;
+border-radius:6px;
+background:#0066cc;
+color:#fff;
+cursor:pointer;
+}
+
 button:hover { background:#004999; }
 </style>
 </head>
+
 <body>
+
 <h1>Schiphol E-learning</h1>
 
-<!-- Always visible -->
 <a href="https://outlook.office.com" target="_blank">Outlook</a>
 
+<a href="https://learninghub-extern.schiphol.nl/" target="_blank" onclick="showOverlay()">
+Inloggen via Learning Hub
+</a>
 
-<a id="login-link" href="https://learninghub-extern.schiphol.nl/ target="_blank" onclick="showOverlay()">Inloggen via Learning Hub</a>
+<a href="https://learninghub-extern.schiphol.nl/nl/ui#/catalog/course/48237464-46c6-4bc3-9e6e-5bc8081e2896" target="_blank">
+E-learning Passengers with Reduced Mobility (PRM)
+</a>
 
-<!-- All links now visible -->
-<div id="hidden-links">
-  <a href="https://learninghub-extern.schiphol.nl/nl/ui#/catalog/course/48237464-46c6-4bc3-9e6e-5bc8081e2896" target="_blank">E-learning Passengers with Reduced Mobility (PRM) - Schiphol Learning Hub</a>
-  <a href="https://learninghub-extern.schiphol.nl/nl/ui#/catalog/course/e9409f7d-fda7-4286-bcf3-ddaa7d2968af" target="_blank">E-learning Safety & Security: module Algemeen/General - Schiphol Learning Hub </a>
-  <a href="https://learninghub-extern.schiphol.nl/nl/ui#/catalog/course/ac483b54-c845-4116-b2a5-edc318d17461" target="_blank">E-learning Safety & Security: module Terminal - Schiphol Learning Hub</a>
-</div>
+<a href="https://learninghub-extern.schiphol.nl/nl/ui#/catalog/course/e9409f7d-fda7-4286-bcf3-ddaa7d2968af" target="_blank">
+E-learning Safety & Security module Algemeen
+</a>
+
+<a href="https://learninghub-extern.schiphol.nl/nl/ui#/catalog/course/ac483b54-c845-4116-b2a5-edc318d17461" target="_blank">
+E-learning Safety & Security module Terminal
+</a>
 
 <div id="overlay">
-  <p>Je bent ingelogd! Klik op de knop om terug te gaan naar Home.</p>
-  <button onclick="hideOverlay()">Terug naar Home</button>
-  <div id="instructions">
-    Als je er niet uitkomt, neem contact op met de IT Support van Enticon.
-  </div>
+<p>Je bent ingelogd! Klik op de knop om terug te gaan naar Home.</p>
+<button onclick="hideOverlay()">Terug naar Home</button>
+
+<div id="instructions">
+Als je er niet uitkomt neem contact op met de IT Support van Enticon.
+</div>
 </div>
 
 <img id="logo" src="logo.png" alt="Enticon Logo">
 
 <script>
 function showOverlay() {
-  document.getElementById("overlay").style.display = "block";
-  // Login in nieuwe venster/tab
-  window.open('https://learninghub-extern.schiphol.nl','_blank');
+document.getElementById("overlay").style.display = "block";
 }
 
-// Home terug-knop
 function hideOverlay() {
-  document.getElementById("overlay").style.display = "none";
+document.getElementById("overlay").style.display = "none";
 }
 </script>
+
 </body>
 </html>
