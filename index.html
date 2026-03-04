@@ -23,8 +23,8 @@ button:hover { background:#004999; }
 
 <a id="login-link" href="https://learninghub-extern.schiphol.nl/ target="_blank" onclick="showOverlay()">Inloggen via Learning Hub</a>
 
-<!-- Hidden links until login -->
-<div id="hidden-links" style="display:none;">
+<!-- All links now visible -->
+<div id="hidden-links">
   <a href="https://learninghub-extern.schiphol.nl/nl/ui#/catalog/course/48237464-46c6-4bc3-9e6e-5bc8081e2896" target="_blank">E-learning Passengers with Reduced Mobility (PRM) - Schiphol Learning Hub</a>
   <a href="https://learninghub-extern.schiphol.nl/nl/ui#/catalog/course/e9409f7d-fda7-4286-bcf3-ddaa7d2968af" target="_blank">E-learning Safety & Security: module Algemeen/General - Schiphol Learning Hub </a>
   <a href="https://learninghub-extern.schiphol.nl/nl/ui#/catalog/course/ac483b54-c845-4116-b2a5-edc318d17461" target="_blank">E-learning Safety & Security: module Terminal - Schiphol Learning Hub</a>
@@ -50,7 +50,6 @@ function showOverlay() {
 // Home terug-knop
 function hideOverlay() {
   document.getElementById("overlay").style.display = "none";
-  document.getElementById("hidden-links").style.display = "block";
 }
 </script>
 </body>
